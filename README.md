@@ -22,8 +22,12 @@ The long term memory of the series is visible through the hiperbolic decrease of
 
 ### Parametric model
 The non-stationary long memory process can then be reduced to stationarity by applying the ARFIMA model. For training the models, both a sample with data up to 2019 and the entire set of data were used. The parametric method requieres a first estimation of d, which is 0.499 for the training set consisting of all data. Applying the difference and visualizing the ACF and PACF diagrams led to the identification of the three potential models in the table below. All parameters are estimated simultaneously while running the models.
-![image](https://user-images.githubusercontent.com/101098099/222830612-354450a0-f351-4eb8-8b2b-e893fab0c490.png)
+
+![image](https://user-images.githubusercontent.com/101098099/222832549-2fc996fa-65f7-4316-a856-428e5a033185.png)
+
+
 The optimal ARFIMA model (3, 0.448, 0) with the lowest AIC was chosen. The model’s residuals pass the Ljung-Box test with p-value > 0.1, meaning they do not show autocorrelation, and don’t present heteroscedasticity according to ARCH-LM. However, they aren’t normally distributed according to Jarque-Berra test. The model can be written as: 
+
 ![image](https://user-images.githubusercontent.com/101098099/222830782-8a1a434b-ffe7-40d2-948a-db6e8736c136.png)
 
 ### Semiparametric model
