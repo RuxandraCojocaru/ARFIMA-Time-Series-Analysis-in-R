@@ -13,22 +13,28 @@ Fractal studies of Brent prices have been conducted before with favorable result
 
 ## Results
 
+### Long term memory proof
 The long term memory of the series is visible through the hiperbolic decrease of coefficients in ACF, as well as by looking at the values of Hurst exponent, between 0.5 and 1.
 ![image](https://user-images.githubusercontent.com/101098099/222784760-87cdb8f3-2651-4da0-8a9c-500e849fd3c3.png)
 <div align="center">
     <img src="https://user-images.githubusercontent.com/101098099/222784890-add6d607-cb26-472a-bed2-5d7a42ba5998.png">
 </div>
 
+### Parametric model
 The non-stationary long memory process can then be reduced to stationarity by applying the ARFIMA model. For training the models, both a sample with data up to 2019 and the entire set of data were used. The parametric method requieres a first estimation of d, which is 0.499 for the training set consisting of all data. Applying the difference and visualizing the ACF and PACF diagrams led to the identification of the three potential models in the table below. All parameters are estimated simultaneously while running the models.
 ![image](https://user-images.githubusercontent.com/101098099/222830612-354450a0-f351-4eb8-8b2b-e893fab0c490.png)
 The optimal ARFIMA model (3, 0.448, 0) with the lowest AIC was chosen. The model’s residuals pass the Ljung-Box test with p-value > 0.1, meaning they do not show autocorrelation, and don’t present heteroscedasticity according to ARCH-LM. However, they aren’t normally distributed according to Jarque-Berra test. The model can be written as: 
 ![image](https://user-images.githubusercontent.com/101098099/222830782-8a1a434b-ffe7-40d2-948a-db6e8736c136.png)
 
+### Semiparametric model
 The semiparametric method involves calculating the mean of estimators like Gweke dan Porte-Hudak (GPH)Smoothed, GPH (Sperio)and R/S, and using this value to differenciate the series.Like this, I obtained the degree of fractal differentiation of 0.197. Similarly to the parametric method, I identified the best model by fitting the AR and MA parameters and looking at AIC, BIC as well as the tests on residuals. The best fit was ARFIMA(3,0.197,0) .
 
-The same proceedures have been applied to a training set ending in 2019, with the results being visible in figure 3 alongside the forecasts resulted from the whole data analysis.
+
+### Conclusions
 
 The RMSE favors the model built by the parametric method. This method indicates a downward trend of price in the next year, with a less steeper slope than that associated with the semiparametric method for the first six months forecasted. After august, the semiparametric method suggests a decrease in the rate of price decline, which will lead to a stabilization of the price around $ 83. The forecast for March 2023, one year after the outbreak of the armed conflict in Ukraine, is $ 80.72. The parametric method, however, suggests a price decline up to  $ 75 in March.
+
+The same proceedures have been applied to a training set ending in 2019, with the results being visible in the figure below, alongside the forecasts resulted from the whole data analysis.
 
 ![image](https://user-images.githubusercontent.com/101098099/222831589-32adfde5-fb35-4210-bb0f-ad1858ff4abf.png)
 
