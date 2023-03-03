@@ -15,6 +15,7 @@ Fractal studies of Brent prices have been conducted before with favorable result
 
 The long term memory of the series is visible through the hiperbolic decrease of coefficients in ACF, as well as by looking at the values of Hurst exponent, between 0.5 and 1.
 ![image](https://user-images.githubusercontent.com/101098099/222784760-87cdb8f3-2651-4da0-8a9c-500e849fd3c3.png)
-![image](https://user-images.githubusercontent.com/101098099/222784890-add6d607-cb26-472a-bed2-5d7a42ba5998.png)
-
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/101098099/222784890-add6d607-cb26-472a-bed2-5d7a42ba5998.png">
+</div>
 
